@@ -1,4 +1,5 @@
-﻿using ConsoleFigureCalculator.Services;
+﻿using ConsoleFigureCalculator.Interfaces;
+using ConsoleFigureCalculator.Services;
 using FigureCalculator;
 using FigureCalculator.Factories;
 using FigureCalculator.Interfaces;
@@ -17,7 +18,7 @@ namespace ConsoleFigureCalculator
                     services
                     .AddScoped<IFigureFactory, FigureFactory>()
                     .AddScoped<Calculator, Calculator>()
-                    .AddScoped<Logger, Logger>()
+                    .AddScoped<ICustomLogger, Logger>()
 ;
                 })
                 .Build();

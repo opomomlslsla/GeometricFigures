@@ -7,7 +7,6 @@ namespace FigureCalculator
     public class Calculator
     {
         private readonly IFigureFactory _factory;
-        private readonly ILogger<Calculator> _logger;
         public Calculator(IFigureFactory factory) 
         {
             _factory = factory;

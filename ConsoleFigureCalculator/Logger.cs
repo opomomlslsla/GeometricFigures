@@ -1,7 +1,9 @@
 ﻿
+using ConsoleFigureCalculator.Interfaces;
+
 namespace ConsoleFigureCalculator
 {
-    public class Logger
+    public class Logger : ICustomLogger
     {
         private static string baseFolder = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
         private readonly string appStorageFolder = Path.Combine(baseFolder, "CalculatorLogs.txt");
